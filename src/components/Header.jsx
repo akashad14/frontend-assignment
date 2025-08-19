@@ -1,22 +1,20 @@
 'use client';
 
 import Link from 'next/link';
-import { useCart } from '@/context/CartContext'; // ✅ using our custom hook
+import { useCart } from '@/context/CartContext';
 
 const Header = () => {
   const { cart } = useCart();
 
-  // ✅ Calculate total items
   const totalItemsInCart = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
     <header className="bg-white shadow-md py-4 px-6 flex justify-between items-center rounded-lg m-4">
-      {/* Logo / Brand */}
+
       <Link href="/" className="text-2xl font-bold text-blue-600">
         MyStore
       </Link>
 
-      {/* Navigation */}
       <nav>
         <ul className="flex space-x-6 items-center">
           <li>
@@ -44,7 +42,7 @@ const Header = () => {
             </Link>
           </li>
 
-          {/* Cart */}
+  
           <li className="relative">
             <Link href="/cart" className="block">
               <svg
@@ -62,7 +60,6 @@ const Header = () => {
                 />
               </svg>
 
-              {/* Dynamic Cart Badge */}
               {totalItemsInCart > 0 && (
                 <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
                   {totalItemsInCart}

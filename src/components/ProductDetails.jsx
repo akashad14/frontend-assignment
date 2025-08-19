@@ -13,7 +13,7 @@ export default function ProductDetails({
 }) {
   return (
     <div className="flex flex-col md:flex-row gap-8">
-      {/* Product Image */}
+     
       <div className="md:w-1/2 bg-gray-100 rounded-lg overflow-hidden shadow-md flex justify-center">
         <Image
           src={product.imageUrl}

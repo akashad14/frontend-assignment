@@ -50,12 +50,12 @@ export const products = [
   },
 ];
 
-// This function simulates an API call
+
 export const fetchProductById = async (id) => {
   return new Promise((resolve) => {
     setTimeout(() => {
       const product = products.find((p) => p.id === id);
       resolve(product);
-    }, 500); // Simulate network delay
+    }, 500);
   });
 };
