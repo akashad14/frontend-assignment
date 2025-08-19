@@ -8,7 +8,7 @@ export default function RecentlyViewed() {
 
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem('recentlyViewed')) || [];
-    setRecentlyViewed(stored.reverse()); // show newest first
+    setRecentlyViewed(stored.reverse());
   }, []);
 
   if (recentlyViewed.length === 0) return null;

@@ -27,7 +27,6 @@ export default function CartPage() {
       <div className="space-y-6">
         {cart.map((item, index) => (
           <div key={index} className="flex items-center gap-4 border-b pb-4">
-            {/* ✅ use item.product instead of product */}
             <Image
               src={item.product.imageUrl}
               alt={item.product.name}
@@ -51,7 +50,7 @@ export default function CartPage() {
               </p>
             </div>
 
-            {/* Quantity Controls */}
+         
             <div className="flex items-center gap-2">
               <button
                 onClick={() =>
@@ -73,7 +72,6 @@ export default function CartPage() {
         ))}
       </div>
 
-      {/* Cart Summary */}
       <div className="mt-8 border-t pt-6 flex justify-between items-center">
         <h2 className="text-xl font-bold">Total:</h2>
         <span className="text-2xl font-bold text-blue-600">
